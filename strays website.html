@@ -194,6 +194,8 @@
     </style>
 </head>
 
+
+
 <body>
     <header>
         <h1>All-In-One Stray Center</h1>
@@ -280,39 +282,126 @@
         <p class="colorful-text">By donating to our cause, you become a hero for these innocent souls. Your contribution helps provide food, medical care, and a safe haven for stray dogs, giving them hope for a brighter future.</p>
     </div>
 
-    <div class="container" id="reviews">
-        <h2 class="colorful-text">Customer Reviews</h2>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
 
-        <!-- Existing Reviews -->
-        <div class="review">
-            <h3>John Doe</h3>
-            <p class="review-text">I adopted a stray dog from this center, and the experience was amazing. They provided all the necessary information and support to ensure a smooth transition for my new furry friend.</p>
-        </div>
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-        <div class="review">
-            <h3>Jane Smith</h3>
-            <p class="review-text">The guide book is fantastic! It helped me understand how to take care of a stray dog properly. Highly recommended!</p>
-        </div>
+        h1 {
+            text-align: center;
+            color: #333;
+        }
 
-        <div class="review">
-            <h3>Mike Johnson</h3>
-            <p class="review-text">The dog food they offer is top-notch. My dog loves it, and I can see a significant improvement in his health and energy levels. Thanks, All-In-One Stray Center!</p>
-        </div>
+        #feedback-form {
+            text-align: center;
+        }
 
-        <!-- Review Submission Form -->
-        <div class="review-form">
-            <h3>Write a Review</h3>
-            <form>
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required><br>
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
 
-                <label for="review">Your Review:</label>
-                <textarea id="review" name="review" rows="4" required></textarea><br>
+        #name-input,
+        #feedback-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-                <button type="submit" class="button">Submit Review</button>
-            </form>
-        </div>
+        #submit-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        #feedback-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .feedback-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Feedback Page</h1>
+        
+        <!-- Input form for name and feedback -->
+        <form id="feedback-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name-input" name="name" required><br>
+            
+            <label for="feedback">Enter your feedback:</label>
+            <textarea id="feedback-input" name="feedback" rows="4" cols="50" required></textarea><br>
+            
+            <button type="button" id="submit-button" onclick="addFeedback()">Submit Feedback</button>
+        </form>
+
+        <!-- Display area for feedback -->
+        <div id="feedback-box"></div>
     </div>
+
+    <script>
+        // Function to add feedback to the display area
+        function addFeedback() {
+            // Get the user's name and feedback text from the input fields
+            var userName = document.getElementById("name-input").value;
+            var feedbackText = document.getElementById("feedback-input").value;
+
+            // Create a new feedback element
+            var feedbackElement = document.createElement("div");
+            feedbackElement.classList.add("feedback-item");
+            feedbackElement.innerHTML = `<strong>${userName}:</strong><br>${feedbackText}`;
+
+            // Append the feedback element to the feedback box
+            var feedbackBox = document.getElementById("feedback-box");
+            feedbackBox.appendChild(feedbackElement);
+
+            // Clear the input fields
+            document.getElementById("name-input").value = "";
+            document.getElementById("feedback-input").value = "";
+        }
+    </script>
+</body>
+</html>
     
 </body>
 
