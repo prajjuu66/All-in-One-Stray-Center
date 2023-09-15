@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Book Payment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Guide Book Payment</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Guide Book Details</h2>
+            <p><strong>Title:</strong> All About Dogs</p>
+            <p><strong>Author:</strong> Prajwal, Adithya, Kushith, Daiwik, Pranavi</p>
+            <p><strong>Price:</strong> ₹50</p>
+        </section>
+
+        <section>
+            <h2>Payment Information</h2>
+            <form action="Book.html" method="get">
+                <label for="card_number">Card Number:</label>
+                <input type="text" id="card_number" name="card_number" required>
+
+                <label for="expiration_date">Expiration Date:</label>
+                <input type="text" id="expiration_date" name="expiration_date" placeholder="MM/YYYY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="submit">Submit Payment</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2023 Guide Book Payment
+    </footer>
+</body>
+
+</html>
